@@ -5,7 +5,7 @@ At Trade Me we're looking to make selling items even easier and so we've decided
 Our new service shipping costs are based on size and we offer different prices for small, medium, and large boxes. Unfortunately we're currently unable to move heavy packages so we've placed an upper limit of 25kg per package.
 
 | Package Type | Length | Breadth | Height | Cost |
-| --- | --- | --- | --- | --- | --- |
+| ------------ | ------ | ------- | ------ | ---- |
 | Small | 200mm | 300mm | 150mm | $5.00 |
 | Medium | 300mm | 400mm | 200mm| $7.50 |
 | Large | 400mm | 600mm | 250mm | $8.50 |
@@ -22,6 +22,6 @@ You are free to choose how you implement the solution though your choices should
 
 ### Submissions ###
 
-We will send you an invite to our Bitbucket git repository where you can commit or upload your code. Once finished let us know via email and we’ll take a look. 
+We will send you an invite to this git repository. Please **fork** this repository, where you can commit or upload your code. Once finished please create a **pull request** and we will review your code. We normally expect to hear back from you within five working days. 
 
 Best of luck, and we look forwards to your response!
