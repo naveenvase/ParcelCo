@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>ParcelCo</RootNamespace>
+    <ApplicationIcon />
+    <Win32Resource />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParcelCo.Parcel.Resources\ParcelCo.Parcel.Resources.csproj" />
+  </ItemGroup>
+
+</Project>

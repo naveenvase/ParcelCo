@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>ParcelCo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParcelCo.Parcel.ModelContracts\ParcelCo.Parcel.ModelContracts.csproj" />
+  </ItemGroup>
+
+</Project>
