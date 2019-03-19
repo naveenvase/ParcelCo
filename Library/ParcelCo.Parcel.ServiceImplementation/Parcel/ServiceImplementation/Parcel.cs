@@ -15,9 +15,9 @@ namespace ParcelCo.Parcel.ServiceImplementation
             
         }
 
-        public IParcelResult Calculate(ref IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight)
+        public IParcelResult Calculate(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight)
         {
-            return PackageCalculator.ApplyRules(ref parcelTypes,  length,  breath,  height, weight);
+            return PackageCalculator.ApplyRules(parcelTypes,  length,  breath,  height, weight);
             
         }
     }

@@ -5,6 +5,6 @@ namespace ParcelCo.Parcel.ServiceContracts
 {
     public interface IParcel
     {
-        IParcelResult Calculate(ref IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight);
+        IParcelResult Calculate(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight);
     }
 }

@@ -13,25 +13,28 @@ namespace ConsoleParcelApp
     {
         private readonly IParcel parcelService = null;
         private readonly ILogger applicationlogger = null;
+        private readonly IParcelType parcelType = null;
         private IEnumerable<IParcelType> parcelTypes = null;
 
         public App(IParcel parcelService, IParcelType parcelType, ILogger<App> logger)
         {
             this.parcelService = parcelService;
             this.applicationlogger = logger;
-            this.parcelTypes = parcelType.ReadFromFile(@"ParcelTypes.json"); 
+            this.parcelType = parcelType;
         }
 
-        public void Run()
+        public void Run(string ResourceFileLocation)
         {
             try
             {
+                this.parcelTypes = parcelType.ReadFromFile(ResourceFileLocation);
+
                 GetInputFromConsole(Resource.ResourceManager.GetString(nameof(Constants.LengthEntry)), out float length);
                 GetInputFromConsole(Resource.ResourceManager.GetString(nameof(Constants.BreathEntry)), out float breath);
                 GetInputFromConsole(Resource.ResourceManager.GetString(nameof(Constants.HeightEntry)), out float height);
                 GetInputFromConsole(Resource.ResourceManager.GetString(nameof(Constants.WeightEntry)), out float weight);
                 
-                var res = parcelService.Calculate(ref parcelTypes, length, breath, height, weight);
+                var res = parcelService.Calculate(parcelTypes, length, breath, height, weight);
                 
                 Console.WriteLine(Resource.ResourceManager.GetString(nameof(Constants.RecommendedPackage)), res.Type, res.Cost);
             }
@@ -51,12 +54,14 @@ namespace ConsoleParcelApp
         private void GetInputFromConsole(string msg, out float input)
         {
             string consoleInputValue = null;
-
-            while (!float.TryParse(consoleInputValue, out input))
+            bool tempResult = false;
+            do
             {
                 Console.WriteLine(msg);
                 consoleInputValue = Console.ReadLine();
+                tempResult = float.TryParse(consoleInputValue, out input);
             }
+            while (!tempResult || (tempResult && input <=0));
         }
 
     }

@@ -35,7 +35,7 @@ namespace ConsoleParcelApp
                 try
                 {
                     var coreApp = serviceProvider.GetService<IApp>();
-                    coreApp.Run();
+                    coreApp.Run( appConfiguration["ResourceSettings:Location"]);
                 }
                 catch (Exception e)
                 {

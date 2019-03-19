@@ -61,11 +61,74 @@ namespace ParcelCo.Parcel.Resources.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Breath is not valid.
+        /// </summary>
+        public static string BreathIsInvalid {
+            get {
+                return ResourceManager.GetString("BreathIsInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parcel type collection is empty.
+        /// </summary>
+        public static string CollectionIsEmpty {
+            get {
+                return ResourceManager.GetString("CollectionIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File contents is not valid.
+        /// </summary>
+        public static string FileContentsIsInValid {
+            get {
+                return ResourceManager.GetString("FileContentsIsInValid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File is empty.
+        /// </summary>
+        public static string FileIsEmpty {
+            get {
+                return ResourceManager.GetString("FileIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height is not valid.
+        /// </summary>
+        public static string HeightIsInvalid {
+            get {
+                return ResourceManager.GetString("HeightIsInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Length is not valid.
+        /// </summary>
+        public static string LengthIsInvalid {
+            get {
+                return ResourceManager.GetString("LengthIsInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Solution not found.
         /// </summary>
         public static string SolutionNotFound {
             get {
                 return ResourceManager.GetString("SolutionNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight is not valid.
+        /// </summary>
+        public static string WeightIsInvalid {
+            get {
+                return ResourceManager.GetString("WeightIsInvalid", resourceCulture);
             }
         }
     }

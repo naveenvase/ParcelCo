@@ -8,18 +8,16 @@ namespace ParcelCo.Parcel.ServiceImplementation.Rules
     public class RulesEngine: IRulesEngine
     {
         private IParcelResult parcelResult = null;
-        private IParcelShape parcelShape = null;
 
         public IList<IRule> Rules { get; private set; } = null;
         
-        public RulesEngine(ISizeCheck sizeCheck, IParcelShape parcelShape, IParcelResult parcelResult)
+        public RulesEngine(ICollectionCheck CollectionCheck, ILengthCheck lengthCheck, IBreathCheck breathCheck, IHeightCheck heightCheck, IWeightCheck weightCheck, IDimensionsCheck dimensionsCheck, IParcelResult parcelResult)
         {
-            Rules = new List<IRule> { sizeCheck };
+            Rules = new List<IRule> { CollectionCheck, lengthCheck, breathCheck, heightCheck, weightCheck, dimensionsCheck };
             this.parcelResult = parcelResult;
-            this.parcelShape = parcelShape;
         }
         
-        public IParcelResult ApplyRules(ref IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight)
+        public IParcelResult ApplyRules(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight)
         {
             IParcelResult parcelRes = parcelResult.CreateTransientInstance();
             

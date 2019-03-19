@@ -7,7 +7,7 @@ using ParcelCo.Parcel.Exceptions;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
-    public class SizeCheck : ISizeCheck
+    public class DimensionsCheck : IDimensionsCheck
     {
         public void ApplyRule(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight, IParcelResult parcelResult)
         {
@@ -16,7 +16,7 @@ namespace ParcelCo.Parcel.ServiceImplementation.Rules
             if (result == null)
             {
                 SolutionNotFoundException customException = new SolutionNotFoundException(Resource.ResourceManager.GetString(nameof(Constants.Exceptions.Constants.SolutionNotFound)));
-                customException.Data.Add("Type", nameof(Constants.Exceptions.Constants.SolutionNotFound));
+                customException.Data.Add(nameof(Constants.Exceptions.Constants.Type), nameof(Constants.Exceptions.Constants.SolutionNotFound));
                 throw customException;
             }
             

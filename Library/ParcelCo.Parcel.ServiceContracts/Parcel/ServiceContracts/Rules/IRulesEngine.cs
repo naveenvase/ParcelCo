@@ -18,7 +18,7 @@ namespace ParcelCo.Parcel.ServiceContracts.Rules
         /// <summary>
         /// Method that runs all the rules in a given factory of classes.
         /// </summary>
-        IParcelResult ApplyRules(ref IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight);
+        IParcelResult ApplyRules(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight);
     }
 
 }

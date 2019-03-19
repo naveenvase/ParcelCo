@@ -117,7 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BreathIsInvalid" xml:space="preserve">
+    <value>Breath is not valid</value>
+  </data>
+  <data name="CollectionIsEmpty" xml:space="preserve">
+    <value>Parcel type collection is empty</value>
+  </data>
+  <data name="FileContentsIsInValid" xml:space="preserve">
+    <value>File contents is not valid</value>
+  </data>
+  <data name="FileIsEmpty" xml:space="preserve">
+    <value>File is empty</value>
+  </data>
+  <data name="HeightIsInvalid" xml:space="preserve">
+    <value>Height is not valid</value>
+  </data>
+  <data name="LengthIsInvalid" xml:space="preserve">
+    <value>Length is not valid</value>
+  </data>
   <data name="SolutionNotFound" xml:space="preserve">
     <value>Solution not found</value>
+  </data>
+  <data name="WeightIsInvalid" xml:space="preserve">
+    <value>Weight is not valid</value>
   </data>
 </root>

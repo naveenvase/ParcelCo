@@ -16,7 +16,12 @@ namespace ParcelCo.InjectionHelper
         {
            services
            .AddTransient<IRulesEngine, RulesEngine>()
-           .AddTransient<ISizeCheck, SizeCheck>()
+           .AddTransient<ICollectionCheck, CollectionCheck>()
+           .AddTransient<ILengthCheck, LengthCheck>()
+           .AddTransient<IBreathCheck, BreathCheck>()
+           .AddTransient<IHeightCheck, HeightCheck>()
+           .AddTransient<IWeightCheck, WeightCheck>()
+           .AddTransient<IDimensionsCheck, DimensionsCheck>()
            .AddTransient<IParcel, ParcelCo.Parcel.ServiceImplementation.Parcel>()
            .AddTransient<IParcelResult, ParcelResult>()
            .AddTransient<IParcelType, ParcelType>()
