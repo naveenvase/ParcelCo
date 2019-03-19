@@ -35,7 +35,7 @@ namespace ConsoleParcelApp
                 try
                 {
                     var coreApp = serviceProvider.GetService<IApp>();
-                    coreApp.Run( appConfiguration["ResourceSettings:Location"]);
+                    coreApp.Run();
                 }
                 catch (Exception e)
                 {
@@ -73,7 +73,7 @@ namespace ConsoleParcelApp
                 loggingBuilder.AddConfiguration(appConfig.GetSection("Logging"));
                 loggingBuilder.AddConsole();
             })
-            .AddSingleton<IApp, App>();
+            .AddSingleton<IApp>(p => ActivatorUtilities.CreateInstance<App>(p, appConfig["ResourceSettings:Location"]));
 
             ServiceInjectionHelper.SetServiceCollection(services);
         }

@@ -16,19 +16,18 @@ namespace ConsoleParcelApp
         private readonly IParcelType parcelType = null;
         private IEnumerable<IParcelType> parcelTypes = null;
 
-        public App(IParcel parcelService, IParcelType parcelType, ILogger<App> logger)
+        public App(string ResourceFileLocation, IParcel parcelService, IParcelType parcelType, ILogger<App> logger)
         {
             this.parcelService = parcelService;
             this.applicationlogger = logger;
             this.parcelType = parcelType;
+            this.parcelTypes = parcelType.ReadFromFile(ResourceFileLocation);
         }
 
-        public void Run(string ResourceFileLocation)
+        public void Run()
         {
             try
             {
-                this.parcelTypes = parcelType.ReadFromFile(ResourceFileLocation);
-
                 GetInputFromConsole(Resource.ResourceManager.GetString(nameof(Constants.LengthEntry)), out float length);
                 GetInputFromConsole(Resource.ResourceManager.GetString(nameof(Constants.BreathEntry)), out float breath);
                 GetInputFromConsole(Resource.ResourceManager.GetString(nameof(Constants.HeightEntry)), out float height);
@@ -36,7 +35,7 @@ namespace ConsoleParcelApp
                 
                 var res = parcelService.Calculate(parcelTypes, length, breath, height, weight);
                 
-                Console.WriteLine(Resource.ResourceManager.GetString(nameof(Constants.RecommendedPackage)), res.Type, res.Cost);
+                Console.WriteLine(Resource.ResourceManager.GetString(nameof(Constants.RecommendedPackage)), res.ParcelType, res.Cost);
             }
             catch (SolutionNotFoundException e)
             {

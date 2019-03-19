@@ -14,19 +14,18 @@ namespace ParcelCo.InjectionHelper
     {
         public static void SetServiceCollection(IServiceCollection services)
         {
-           services
-           .AddTransient<IRulesEngine, RulesEngine>()
-           .AddTransient<ICollectionCheck, CollectionCheck>()
-           .AddTransient<ILengthCheck, LengthCheck>()
-           .AddTransient<IBreathCheck, BreathCheck>()
-           .AddTransient<IHeightCheck, HeightCheck>()
-           .AddTransient<IWeightCheck, WeightCheck>()
-           .AddTransient<IDimensionsCheck, DimensionsCheck>()
-           .AddTransient<IParcel, ParcelCo.Parcel.ServiceImplementation.Parcel>()
-           .AddTransient<IParcelResult, ParcelResult>()
-           .AddTransient<IParcelType, ParcelType>()
-           .AddSingleton<IJsonReader,JsonReader>()
-           .AddTransient<IParcelShape, ParcelShape>();
+            services
+            .AddTransient<IRulesEngine, RulesEngine>()
+            .AddTransient<ICollectionCheck, CollectionCheck>()
+            .AddTransient<ILengthCheck, LengthCheck>()
+            .AddTransient<IBreathCheck, BreathCheck>()
+            .AddTransient<IHeightCheck, HeightCheck>()
+            .AddTransient<IWeightCheck, WeightCheck>()
+            .AddTransient<IDimensionsCheck, DimensionsCheck>()
+            .AddTransient<IParcel, ParcelCo.Parcel.ServiceImplementation.Parcel>()
+            .AddTransient<IParcelResult, ParcelResult>()
+            .AddTransient<IParcelType, ParcelType>()
+            .AddSingleton<IJsonReader, JsonReader>();
         }
     }
 }

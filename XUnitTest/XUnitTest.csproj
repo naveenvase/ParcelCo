@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\EmptyParcelTypes.json" />
     <None Remove="Resources\ParcelTypes.json" />
+    <None Remove="Resources\ParcelTypesEmpty.json" />
     <None Remove="Resources\ParcelTypesInvalidContents.json" />
     <None Remove="Resources\ParcelTypesNoRecords.json" />
   </ItemGroup>
@@ -20,7 +20,7 @@
     <Content Include="Resources\ParcelTypesNoRecords.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\EmptyParcelTypes.json">
+    <Content Include="Resources\ParcelTypesEmpty.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\ParcelTypes.json">

@@ -2,7 +2,7 @@
 using Xunit;
 using ParcelCo.Parcel.ModelContracts;
 using System.Collections.Generic;
-using System;
+using System.IO;
 using System.Linq;
 
 namespace XUnitTest
@@ -17,7 +17,7 @@ namespace XUnitTest
         }
 
         [Fact]
-        public void ReadJsonFileTest()
+        public void ReadJsonFile()
         {
             IParcelType parcelType = serviceProvider.GetService<IParcelType>();
             IEnumerable<IParcelType> parcelTypes = parcelType.ReadFromFile(@"Resources\ParcelTypes.json");
@@ -31,8 +31,9 @@ namespace XUnitTest
         public void ReadJsonFileWithEmptyFileContents()
         {
             IParcelType parcelType = serviceProvider.GetService<IParcelType>();
+            IEnumerable<IParcelType> parcelTypes = parcelType.ReadFromFile(@"Resources\ParcelTypesEmpty.json");
 
-            Assert.Throws<System.IO.IOException>(() => parcelType.ReadFromFile(@"Resources\EmptyParcelTypes.json"));
+            Assert.True(parcelTypes == null);
         }
 
         [Fact]
@@ -40,23 +41,25 @@ namespace XUnitTest
         {
             IParcelType parcelType = serviceProvider.GetService<IParcelType>();
 
-            Assert.Throws<System.IO.DirectoryNotFoundException>(() => parcelType.ReadFromFile(@"Resources2\EmptyParcelTypes.json"));
+            Assert.Throws<DirectoryNotFoundException>(() => parcelType.ReadFromFile(@"Resources2\ParcelTypesEmpty.json"));
         }
 
         [Fact]
-        public void ReadJsonFileWithEmptyRecords()
+        public void ReadJsonFileWithNoRecords()
         {
             IParcelType parcelType = serviceProvider.GetService<IParcelType>();
+            IEnumerable<IParcelType> parcelTypes = parcelType.ReadFromFile(@"Resources\ParcelTypesNoRecords.json");
 
-            Assert.Throws<System.IO.IOException>(() => parcelType.ReadFromFile(@"Resources\ParcelTypesNoRecords.json"));
+            Assert.True(parcelTypes != null && parcelTypes.Count() == 0 );
         }
 
         [Fact]
         public void ReadJsonFileWithInvalidContents()
         {
             IParcelType parcelType = serviceProvider.GetService<IParcelType>();
-
-            Assert.Throws<System.IO.IOException>(() => parcelType.ReadFromFile(@"Resources\ParcelTypesInvalidContents.json"));
+            IEnumerable<IParcelType> parcelTypes = parcelType.ReadFromFile(@"Resources\ParcelTypesInvalidContents.json");
+            
+            Assert.True(parcelTypes != null && parcelTypes.Count() ==3);
         }
     }
 }
