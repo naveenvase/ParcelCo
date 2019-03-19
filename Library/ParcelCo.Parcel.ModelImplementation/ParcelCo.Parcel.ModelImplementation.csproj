@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>ParcelCo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParcelCo.Jason.ServiceContracts\ParcelCo.Json.ServiceContracts.csproj" />
+    <ProjectReference Include="..\ParcelCo.Parcel.Constants\ParcelCo.Parcel.Constants.csproj" />
+    <ProjectReference Include="..\ParcelCo.Parcel.ModelContracts\ParcelCo.Parcel.ModelContracts.csproj" />
+    <ProjectReference Include="..\ParcelCo.Parcel.Resources\ParcelCo.Parcel.Resources.csproj" />
+  </ItemGroup>
+
+</Project>

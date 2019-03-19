@@ -1,0 +1,20 @@
+[
+  {
+    "Type": "Small",
+    "Cost": 5.00,
+    "MaxSize": 1100.0,
+    "MaxWeight": 25.0
+  },
+  {
+    "Type": "Medium",
+    "Cost": 7.50,
+    "MaxSize": 1500.0,
+    "MaxWeight": 25.0
+  },
+  {
+    "Type": "Large",
+    "Cost": 8.50,
+    "MaxSize": 2100.0,
+    "MaxWeight": 25.0
+  }
+]

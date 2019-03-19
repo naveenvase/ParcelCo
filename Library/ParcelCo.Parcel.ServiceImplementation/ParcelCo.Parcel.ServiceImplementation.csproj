@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>ParcelCo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Parcel\ServiceImplementation\Rules\BreathCheck.cs~RF504b725.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParcelCo.Parcel.Constants\ParcelCo.Parcel.Constants.csproj" />
+    <ProjectReference Include="..\ParcelCo.Parcel.Exceptions\ParcelCo.Parcel.Exceptions.csproj" />
+    <ProjectReference Include="..\ParcelCo.Parcel.ServiceContracts\ParcelCo.Parcel.ServiceContracts.csproj" />
+  </ItemGroup>
+
+</Project>
