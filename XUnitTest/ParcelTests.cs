@@ -6,17 +6,16 @@ using System.Collections.Generic;
 using ParcelCo.Parcel.Exceptions;
 using ParcelCo.Parcel.Constants.Exceptions;
 using System;
-using ParcelCo.Parcel.Resources.Exceptions;
 
 namespace XUnitTest
 {
     public class ParcelTests : IClassFixture<DbFixture>
     {
-        private readonly ServiceProvider serviceProvider;
+        private readonly ServiceProvider MockedParcelServiceProvider;
 
         public ParcelTests(DbFixture fixture)
         {
-            serviceProvider = fixture.ServiceProvider;
+            MockedParcelServiceProvider = fixture.MockedParcelServiceProvider;
         }
 
         [Theory]
@@ -26,8 +25,8 @@ namespace XUnitTest
         [InlineData(400, 300, 50, 25)]
         public void CalculateWithValidSmallPackageDimensions(float length, float breath, float height,float weight)
         {
-            IParcel parcelService = serviceProvider.GetService<IParcel>();
-            IParcelType parcelType = serviceProvider.GetService<IParcelType>();
+            IParcel parcelService = MockedParcelServiceProvider.GetService<IParcel>();
+            IParcelType parcelType = MockedParcelServiceProvider.GetService<IParcelType>();
 
             IEnumerable<IParcelType> parcelTypes = new List<IParcelType> {
                 parcelType.CreateTransientInstance("Small", 5.00M, 1100, 25 ),
@@ -38,7 +37,7 @@ namespace XUnitTest
             IParcelResult result = null;
 
             result = parcelService.Calculate(parcelTypes, length, breath, height, weight);
-            Assert.True(result.Type == "Small");
+            Assert.True(result.ParcelType == "Small");
         }
 
         [Theory]
@@ -48,8 +47,8 @@ namespace XUnitTest
         [InlineData(800, 100, 100, 25)]
         public void CalculateWithValidMediumPackageDimensions(float length, float breath, float height, float weight)
         {
-            IParcel parcelService = serviceProvider.GetService<IParcel>();
-            IParcelType parcelType = serviceProvider.GetService<IParcelType>();
+            IParcel parcelService = MockedParcelServiceProvider.GetService<IParcel>();
+            IParcelType parcelType = MockedParcelServiceProvider.GetService<IParcelType>();
 
             IEnumerable<IParcelType> parcelTypes = new List<IParcelType> {
                 parcelType.CreateTransientInstance("Small", 5.00M, 1100, 25 ),
@@ -60,7 +59,7 @@ namespace XUnitTest
             IParcelResult result = null;
 
             result = parcelService.Calculate(parcelTypes, length, breath, height, weight);
-            Assert.True(result.Type == "Medium");
+            Assert.True(result.ParcelType == "Medium");
         }
 
         [Theory]
@@ -70,8 +69,8 @@ namespace XUnitTest
         [InlineData(100, 400, 400, 25)]
         public void CalculateWithValidLargePackageDimensions(float length, float breath, float height, float weight)
         {
-            IParcel parcelService = serviceProvider.GetService<IParcel>();
-            IParcelType parcelType = serviceProvider.GetService<IParcelType>();
+            IParcel parcelService = MockedParcelServiceProvider.GetService<IParcel>();
+            IParcelType parcelType = MockedParcelServiceProvider.GetService<IParcelType>();
 
             IEnumerable<IParcelType> parcelTypes = new List<IParcelType> {
                 parcelType.CreateTransientInstance("Small", 5.00M, 1100, 25 ),
@@ -82,7 +81,7 @@ namespace XUnitTest
             IParcelResult result = null;
 
             result = parcelService.Calculate(parcelTypes, length, breath, height, weight);
-            Assert.True(result.Type == "Large");
+            Assert.True(result.ParcelType == "Large");
         }
 
         [Theory]
@@ -99,8 +98,8 @@ namespace XUnitTest
         [InlineData(1500, -3000, 100, 11)]
         public void CalculateWithInvalidPackageDimensions(float length, float breath, float height, float weight)
         {
-            IParcel parcelService = serviceProvider.GetService<IParcel>();
-            IParcelType parcelType = serviceProvider.GetService<IParcelType>();
+            IParcel parcelService = MockedParcelServiceProvider.GetService<IParcel>();
+            IParcelType parcelType = MockedParcelServiceProvider.GetService<IParcelType>();
 
             IEnumerable<IParcelType> parcelTypes = new List<IParcelType> {
                 parcelType.CreateTransientInstance("Small", 5.00M, 1100, 25 ),
@@ -120,8 +119,8 @@ namespace XUnitTest
         [InlineData(400, 330, 5077, 23)]
         public void CalculateWithInvalidLargePackageDimensions(float length, float breath, float height, float weight)
         {
-            IParcel parcelService = serviceProvider.GetService<IParcel>();
-            IParcelType parcelType = serviceProvider.GetService<IParcelType>();
+            IParcel parcelService = MockedParcelServiceProvider.GetService<IParcel>();
+            IParcelType parcelType = MockedParcelServiceProvider.GetService<IParcelType>();
 
             IEnumerable<IParcelType> parcelTypes = new List<IParcelType> {
                 parcelType.CreateTransientInstance("Small", 5.00M, 1100, 25 ),
@@ -136,7 +135,7 @@ namespace XUnitTest
         [Fact]
         public void CalculateWithInvalidEmptyParcelCollection()
         {
-            IParcel parcelService = serviceProvider.GetService<IParcel>();
+            IParcel parcelService = MockedParcelServiceProvider.GetService<IParcel>();
             IEnumerable<IParcelType> parcelTypes = null;
 
             Exception ex = Assert.Throws<RulesException>(() => parcelService.Calculate(parcelTypes, 1, 1, 1, 1));
