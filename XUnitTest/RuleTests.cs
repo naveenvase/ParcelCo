@@ -40,7 +40,7 @@ namespace XUnitTest
         }
 
         [Fact]
-        public void CollectionCheckWithInvalidRecords()
+        public void CollectionCheckWithInInvalidRecords()
         {
             ICollectionCheck collectionCheck = serviceProvider.GetService<ICollectionCheck>();
             IParcelType parcelType = MockedParcelServiceProvider.GetService<IParcelType>();
@@ -52,26 +52,14 @@ namespace XUnitTest
             };
 
             Exception ex = Assert.Throws<RulesException>(() => collectionCheck.ApplyRule(parcelTypes, 0, 0, 0, 0, null));
-            Assert.True(ex.Data != null && ex.Data[nameof(Constants.Type)].ToString() == nameof(Constants.CollectionInValidRecords));
+            Assert.True(ex.Data != null && ex.Data[nameof(Constants.Type)].ToString() == nameof(Constants.CollectionInvalidRecords));
         }
 
         [Theory]
         [InlineData(-300)]
         [InlineData(0)]
         [InlineData(-1)]
-        public void LengthCheckWithInValidValues(float length)
-        {
-            ILengthCheck lengthCheck = serviceProvider.GetService<ILengthCheck>();
-
-            Exception ex = Assert.Throws<RulesException>(() => lengthCheck.ApplyRule(null, length, 0, 0, 0, null));
-            Assert.True(ex.Data != null && ex.Data[nameof(Constants.Type)].ToString() == nameof(Constants.LengthIsInvalid));
-        }
-
-        [Theory]
-        [InlineData(-300)]
-        [InlineData(0)]
-        [InlineData(-1)]
-        public void LengthCheckWithValidValues(float length)
+        public void LengthCheckWithInvalidValues(float length)
         {
             ILengthCheck lengthCheck = serviceProvider.GetService<ILengthCheck>();
 
@@ -83,7 +71,7 @@ namespace XUnitTest
         [InlineData(-45300)]
         [InlineData(0)]
         [InlineData(-1)]
-        public void BreathCheckWithValidValues(float breath)
+        public void BreathCheckWithInvalidValues(float breath)
         {
             IBreathCheck breathCheck = serviceProvider.GetService<IBreathCheck>();
 
@@ -95,7 +83,7 @@ namespace XUnitTest
         [InlineData(-45300)]
         [InlineData(0)]
         [InlineData(-1)]
-        public void HeightCheckWithValidValues(float height)
+        public void HeightCheckWithInvalidValues(float height)
         {
             IHeightCheck heightCheck = serviceProvider.GetService<IHeightCheck>();
 
@@ -107,7 +95,7 @@ namespace XUnitTest
         [InlineData(-45300)]
         [InlineData(0)]
         [InlineData(-1)]
-        public void WeightCheckWithValidValues(float weight)
+        public void WeightCheckWithInvalidValues(float weight)
         {
             IWeightCheck weightCheck = serviceProvider.GetService<IWeightCheck>();
 
@@ -120,7 +108,7 @@ namespace XUnitTest
         [InlineData(1600, 200, 150, 25)]
         [InlineData(400, 200, 800, 25)]
         [InlineData(400, 3100, 150, 25)]
-        public void DimensionsCheckWithInValidValues(float length, float breath, float height, float weight)
+        public void DimensionsCheckWithInvalidValues(float length, float breath, float height, float weight)
         {
             IDimensionsCheck dimensionsCheck = serviceProvider.GetService<IDimensionsCheck>();
             IParcelType parcelType = MockedParcelServiceProvider.GetService<IParcelType>();
@@ -154,7 +142,7 @@ namespace XUnitTest
             };
 
             dimensionsCheck.ApplyRule(parcelTypes, length, breath, height, weight, parcelResult);
-            Assert.True(parcelResult.ParcelType == "Small");
+            Assert.True(parcelResult.Type == "Small");
         }
 
         [Theory]
@@ -175,7 +163,7 @@ namespace XUnitTest
             };
 
             dimensionsCheck.ApplyRule(parcelTypes, length, breath, height, weight, parcelResult);
-            Assert.True(parcelResult.ParcelType == "Medium");
+            Assert.True(parcelResult.Type == "Medium");
         }
 
         [Theory]
@@ -196,7 +184,7 @@ namespace XUnitTest
             };
 
             dimensionsCheck.ApplyRule(parcelTypes, length, breath, height, weight, parcelResult);
-            Assert.True(parcelResult.ParcelType == "Large");
+            Assert.True(parcelResult.Type == "Large");
         }
     }
 }

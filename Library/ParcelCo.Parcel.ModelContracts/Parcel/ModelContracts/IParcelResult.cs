@@ -6,7 +6,7 @@ namespace ParcelCo.Parcel.ModelContracts
 {
     public interface IParcelResult
     {
-        string ParcelType { get; set; }
+        string Type { get; set; }
         decimal Cost { get; set; }
         IParcelResult CreateTransientInstance(string type = null, decimal cost = 0);
     }

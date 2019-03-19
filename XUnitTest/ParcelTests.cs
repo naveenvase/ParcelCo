@@ -37,7 +37,7 @@ namespace XUnitTest
             IParcelResult result = null;
 
             result = parcelService.Calculate(parcelTypes, length, breath, height, weight);
-            Assert.True(result.ParcelType == "Small");
+            Assert.True(result.Type == "Small");
         }
 
         [Theory]
@@ -59,7 +59,7 @@ namespace XUnitTest
             IParcelResult result = null;
 
             result = parcelService.Calculate(parcelTypes, length, breath, height, weight);
-            Assert.True(result.ParcelType == "Medium");
+            Assert.True(result.Type == "Medium");
         }
 
         [Theory]
@@ -81,7 +81,7 @@ namespace XUnitTest
             IParcelResult result = null;
 
             result = parcelService.Calculate(parcelTypes, length, breath, height, weight);
-            Assert.True(result.ParcelType == "Large");
+            Assert.True(result.Type == "Large");
         }
 
         [Theory]

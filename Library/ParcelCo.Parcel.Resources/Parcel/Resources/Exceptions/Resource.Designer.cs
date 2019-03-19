@@ -70,6 +70,15 @@ namespace ParcelCo.Parcel.Resources.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collection has invalid records.
+        /// </summary>
+        public static string CollectionInvalidRecords {
+            get {
+                return ResourceManager.GetString("CollectionInvalidRecords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Parcel type collection is empty.
         /// </summary>
         public static string CollectionIsEmpty {

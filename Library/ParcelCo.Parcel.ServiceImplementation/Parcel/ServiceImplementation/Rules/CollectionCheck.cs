@@ -21,8 +21,8 @@ namespace ParcelCo.Parcel.ServiceImplementation.Rules
             }
             else if ( (recordCount > 0 && parcelTypes.Where(x => x.Type == null).Count() == recordCount))
             {
-                RulesException customException = new RulesException(Resource.ResourceManager.GetString(nameof(Constants.Exceptions.Constants.CollectionInValidRecords)));
-                customException.Data.Add(nameof(Constants.Exceptions.Constants.Type), nameof(Constants.Exceptions.Constants.CollectionInValidRecords));
+                RulesException customException = new RulesException(Resource.ResourceManager.GetString(nameof(Constants.Exceptions.Constants.CollectionInvalidRecords)));
+                customException.Data.Add(nameof(Constants.Exceptions.Constants.Type), nameof(Constants.Exceptions.Constants.CollectionInvalidRecords));
                 throw customException;
             }
         }

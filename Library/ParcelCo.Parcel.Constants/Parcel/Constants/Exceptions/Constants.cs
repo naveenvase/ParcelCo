@@ -10,6 +10,6 @@
         public static string CollectionIsEmpty;
         public static string Type;
         public static string FileIsEmpty;
-        public static string CollectionInValidRecords;
+        public static string CollectionInvalidRecords;
     }
 }

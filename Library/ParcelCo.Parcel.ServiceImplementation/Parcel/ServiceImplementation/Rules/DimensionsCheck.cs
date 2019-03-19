@@ -20,7 +20,7 @@ namespace ParcelCo.Parcel.ServiceImplementation.Rules
                 throw customException;
             }
             
-            parcelResult.ParcelType = result.Type;
+            parcelResult.Type = result.Type;
             parcelResult.Cost = result.Cost; 
         }
     }

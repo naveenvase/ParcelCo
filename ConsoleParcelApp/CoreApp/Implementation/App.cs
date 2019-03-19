@@ -35,7 +35,7 @@ namespace ConsoleParcelApp
                 
                 var res = parcelService.Calculate(parcelTypes, length, breath, height, weight);
                 
-                Console.WriteLine(Resource.ResourceManager.GetString(nameof(Constants.RecommendedPackage)), res.ParcelType, res.Cost);
+                Console.WriteLine(Resource.ResourceManager.GetString(nameof(Constants.RecommendedPackage)), res.Type, res.Cost);
             }
             catch (SolutionNotFoundException e)
             {

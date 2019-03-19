@@ -24,7 +24,7 @@ namespace XUnitTest
 
             var result = (from parcel in parcelTypes where parcel.Type == "Medium" select parcel).FirstOrDefault();
 
-            Assert.True(result != null);
+            Assert.True(result != null && result.Type == "Medium");
         }
 
         [Fact]
