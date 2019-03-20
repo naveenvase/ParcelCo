@@ -3,7 +3,7 @@
 
 * This exercise is based on loosely coupled components. It utilises dependency injection, seperation of concerns, SOLID princples and strategy pattern. It relies on C#(7.1) and .net core 2.1 framework. It consists of 
   * console app - Only a stub to run the library services
-  * Unit Tests - over 60 test cases
+  * Unit Tests - 65 test cases
   * library projects
 	* ParcelCo.Parcel.ServiceContracts
 	* ParcelCo.Parcel.ServiceImplementation
@@ -21,7 +21,7 @@
 * For package types Small, Medium and Large, the overall size is calculated and stored as 'OverallSize'. The calcuation is as follows: 
   * Length + (Breath multiplied by 2) + (Height multiplied by 2). This overall package size is used to recommend a package type that closely matches the user supplied package dimensions. For more details look into comments section for DimensionsCheck class in ParcelCo.Parcel.ServiceImplementation.Rules
   
-* The data for package types Small, Medium and Large is stored in a json file. The component retrieves this data and uses this data to recommend package types.
+* The data for package types Small, Medium and Large is stored in a json file. This data is used to recommend package types.
 
 * Validation/Business logic for identifying best package solution is rules-based and new rules can be added by adding new classes that apply the IRule interface, rather than modifying the existing class.
 
