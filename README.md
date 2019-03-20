@@ -1,4 +1,5 @@
 
+# Not ready for review yet #
 # Parse the Parcel Developer Notes #
 
 * This exercise is based on loosely coupled components and utilises dependency injection. It relies on .net core 2.1 framework. It consists of 
@@ -25,7 +26,7 @@
 
 * Validation/Business logic for identifying best package solution is rules-based and new rules can be added by adding new classes that apply the IRule interface, rather than modifying the class.
 
-* Solution caters for localised content i.e. user messages, user error messages. Resources file for various various languages needs to be completed.
+* Solution caters for localised content i.e. user messages, user error messages. Resources file for various languages needs to be completed.
 
 # Parse the Parcel #
 
