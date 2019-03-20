@@ -7,8 +7,10 @@ using System.Linq;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
+    /// <inheritdoc />
     public class CollectionCheck : ICollectionCheck
     {
+        /// <inheritdoc />
         public void ApplyRule(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight, IParcelResult parcelResult)
         {
             var recordCount = parcelTypes?.Count();

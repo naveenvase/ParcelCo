@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleParcelApp</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleParcelApp.IApp">
+            <summary>The console application</summary>
+            <remarks>This is essentally the entry point for the console app. It contains the core code
+            specific to the  app, like getting inputs, and processing them to identify the best package
+            solution </remarks>
+        </member>
+        <member name="M:ConsoleParcelApp.IApp.Run">
+            <summary>Run the application, injecting constructor dependencies</summary>
+        </member>
+        <member name="T:ConsoleParcelApp.App">
+            <inheritdoc/>
+        </member>
+        <member name="M:ConsoleParcelApp.App.#ctor(System.String,ParcelCo.Parcel.ServiceContracts.IParcel,ParcelCo.Parcel.ModelContracts.IParcelType,Microsoft.Extensions.Logging.ILogger{ConsoleParcelApp.App})">
+            <summary>Initializes a new instance of the <see cref="T:ConsoleParcelApp.App"/> class.</summary>
+            <param name="ResourceFileLocation">The resource file location.</param>
+            <param name="parcelService">The parcel service.</param>
+            <param name="parcelType">Type of the parcel.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:ConsoleParcelApp.App.Run">
+            <inheritdoc/>
+        </member>
+        <member name="M:ConsoleParcelApp.App.GetInputFromConsole(System.String,System.Single@)">
+            <summary>Gets the input from console.</summary>
+            <param name="msg">The error message to display.</param>
+            <param name="input">The input.</param>
+        </member>
+        <member name="T:ConsoleParcelApp.Program">
+            <summary>
+            The <c>program</c> class readies the 
+            envionrment like load app.config, set up logging, set up current culture, set up dependency injection e.t.c
+            </summary>
+            <remarks>After the enviornment is set up loads the <see cref="T:ConsoleParcelApp.App"> class
+            via dependency injection and runs it.</see>/></remarks>
+        </member>
+        <member name="M:ConsoleParcelApp.Program.ConfigureApp(Microsoft.Extensions.Configuration.IConfigurationBuilder)">
+            <summary>Configures the application config settings</summary>
+            <param name="AppConfigBuilder">The application configuration builder.</param>
+        </member>
+        <member name="M:ConsoleParcelApp.Program.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfigurationRoot)">
+            <summary>Configures the application services like DI, logging, application config file e.t.c</summary>
+            <param name="services">The services.</param>
+            <param name="appConfig">The application configuration.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParcelCo.Json.ServiceImplementation</name>
+    </assembly>
+    <members>
+        <member name="T:ParcelCo.Json.ServiceImplementation.JsonReader">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParcelCo.Json.ServiceImplementation.JsonReader.ReadOjectFromJsonFile``1(System.String)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

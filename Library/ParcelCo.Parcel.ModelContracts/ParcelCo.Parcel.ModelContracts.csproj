@@ -5,4 +5,9 @@
     <RootNamespace>ParcelCo</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DocumentationFile>D:\GitHub\ParcelCo\Library\ParcelCo.Parcel.ModelContracts\ParcelCo.Parcel.ModelContracts.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

@@ -6,7 +6,8 @@ using ParcelCo.Parcel.ModelContracts;
 namespace ParcelCo.Parcel.ServiceContracts.Rules
 {
     /// <summary>
-    /// This interfce acts as a factory interface. It is desgined to create a bunch of strategy classes that contain rules/business logic 
+    /// This interfce acts as a factory. It is desgined to store a bunch of 
+    /// strategy classes that contain rules/business logic 
     /// </summary>
     public interface IRulesEngine
     {
@@ -16,8 +17,14 @@ namespace ParcelCo.Parcel.ServiceContracts.Rules
         IList<IRule> Rules { get; }
 
         /// <summary>
-        /// Method that runs all the rules in a given factory of classes.
+        /// Method that runs all the rules in the <see cref="Rules"/> collection.
         /// </summary>
+        /// <param name="parcelTypes">The parcel types.</param>
+        /// <param name="length">The length.</param>
+        /// <param name="breath">The breath.</param>
+        /// <param name="height">The height.</param>
+        /// <param name="weight">The weight.</param>
+        /// <returns>Return <see cref="IParcelResult"/> object</returns>
         IParcelResult ApplyRules(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight);
     }
 

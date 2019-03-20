@@ -5,6 +5,10 @@
     <RootNamespace>ParcelCo</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\GitHub\ParcelCo\Library\ParcelCo.Parcel.ServiceImplementation\ParcelCo.Parcel.ServiceImplementation.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Parcel\ServiceImplementation\Rules\BreathCheck.cs~RF504b725.TMP" />
   </ItemGroup>

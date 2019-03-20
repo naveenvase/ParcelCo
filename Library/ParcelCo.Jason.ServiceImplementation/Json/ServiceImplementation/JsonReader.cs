@@ -5,8 +5,10 @@ using ParcelCo.Json.ServiceContracts;
 
 namespace ParcelCo.Json.ServiceImplementation
 {
+    /// <inheritdoc/>
     public class JsonReader : IJsonReader
     {
+        /// <inheritdoc/>
         public T ReadOjectFromJsonFile<T>(string fileLocation)
         {
             using (StreamReader file = File.OpenText(fileLocation))

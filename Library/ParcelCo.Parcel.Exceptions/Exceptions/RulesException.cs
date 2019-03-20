@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
+/// <summary>
+/// Contains Exception classes
+/// </summary>
 namespace ParcelCo.Parcel.Exceptions
 {
     [Serializable]

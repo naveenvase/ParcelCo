@@ -6,8 +6,10 @@ using ParcelCo.Parcel.Exceptions;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
+    /// <inheritDoc/>
     public class WeightCheck : IWeightCheck
     {
+        /// <inheritDoc/>
         public void ApplyRule(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight, IParcelResult parcelResult)
         {
             if (weight <= 0)

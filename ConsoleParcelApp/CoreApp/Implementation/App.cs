@@ -9,6 +9,7 @@ using ParcelCo.Parcel.Exceptions;
 
 namespace ConsoleParcelApp
 {
+    /// <inheritdoc/>
     public class App : IApp
     {
         private readonly IParcel parcelService = null;
@@ -16,6 +17,11 @@ namespace ConsoleParcelApp
         private readonly IParcelType parcelType = null;
         private IEnumerable<IParcelType> parcelTypes = null;
 
+        /// <summary>Initializes a new instance of the <see cref="App"/> class.</summary>
+        /// <param name="ResourceFileLocation">The resource file location.</param>
+        /// <param name="parcelService">The parcel service.</param>
+        /// <param name="parcelType">Type of the parcel.</param>
+        /// <param name="logger">The logger.</param>
         public App(string ResourceFileLocation, IParcel parcelService, IParcelType parcelType, ILogger<App> logger)
         {
             this.parcelService = parcelService;
@@ -24,6 +30,7 @@ namespace ConsoleParcelApp
             this.parcelTypes = parcelType.ReadFromFile(ResourceFileLocation);
         }
 
+        ///<inheritdoc/>
         public void Run()
         {
             try
@@ -37,6 +44,7 @@ namespace ConsoleParcelApp
                 
                 Console.WriteLine(Resource.ResourceManager.GetString(nameof(Constants.RecommendedPackage)), res.Type, res.Cost);
             }
+            
             catch (SolutionNotFoundException e)
             {
                 Console.WriteLine(e.Message);
@@ -50,6 +58,9 @@ namespace ConsoleParcelApp
 
         }
 
+        /// <summary>Gets the input from console.</summary>
+        /// <param name="msg">The error message to display.</param>
+        /// <param name="input">The input.</param>
         private void GetInputFromConsole(string msg, out float input)
         {
             string consoleInputValue = null;

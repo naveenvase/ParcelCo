@@ -5,11 +5,15 @@ using ParcelCo.Parcel.ModelContracts;
 
 namespace ParcelCo.Parcel.ModelImplmentation
 {
+    /// <inheritdoc/>
     public class ParcelResult : IParcelResult
     {
+        /// <inheritdoc/>
         public decimal Cost {get;set;}
+        /// <inheritdoc/>
         public string Type { get; set; }
-        
+
+        /// <inheritdoc/>
         public IParcelResult CreateTransientInstance(string type = null, decimal cost = 0)
         {
             IParcelResult instance = (IParcelResult)MemberwiseClone();
@@ -18,7 +22,5 @@ namespace ParcelCo.Parcel.ModelImplmentation
 
             return instance;
         }
-
-
     }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParcelCo.Parcel.ModelImplementation</name>
+    </assembly>
+    <members>
+        <member name="T:ParcelCo.Parcel.ModelImplmentation.ParcelResult">
+            <inheritdoc/>
+        </member>
+        <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelResult.Cost">
+            <inheritdoc/>
+        </member>
+        <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelResult.Type">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParcelCo.Parcel.ModelImplmentation.ParcelResult.CreateTransientInstance(System.String,System.Decimal)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ParcelCo.Parcel.ModelImplmentation.ParcelType">
+            <inheritdoc/>
+        </member>
+        <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.Type">
+            <inheritdoc/>
+        </member>
+        <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.Cost">
+            <inheritdoc/>
+        </member>
+        <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.MaxSize">
+            <inheritdoc/>
+        </member>
+        <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.MaxWeight">
+            <inheritdoc />
+        </member>
+        <member name="F:ParcelCo.Parcel.ModelImplmentation.ParcelType.jsonReader">
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ModelImplmentation.ParcelType.#ctor(ParcelCo.Json.ServiceContracts.IJsonReader)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParcelCo.Parcel.ModelImplmentation.ParcelType"/> class.
+            </summary>
+            <param name="jsonReader">The json file reader.</param>
+        </member>
+        <member name="M:ParcelCo.Parcel.ModelImplmentation.ParcelType.ReadFromFile(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ModelImplmentation.ParcelType.CreateTransientInstance(System.String,System.Decimal,System.Single,System.Single)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

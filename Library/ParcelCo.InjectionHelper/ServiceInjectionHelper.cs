@@ -10,8 +10,13 @@ using ParcelCo.Json.ServiceImplementation;
 
 namespace ParcelCo.InjectionHelper
 {
+    /// <summary>
+    /// Helper class to set up dependency injection, via .net core built in DI.
+    /// </summary>
     public static class ServiceInjectionHelper
     {
+        /// <summary>Helper methd to set up dependency injection, via .net core built in DI.</summary>
+        /// <param name="services">The .net core DI servicescollection</param>
         public static void SetServiceCollection(IServiceCollection services)
         {
             services

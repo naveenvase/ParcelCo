@@ -5,4 +5,8 @@
     <RootNamespace>ParcelCo</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\GitHub\ParcelCo\Library\ParcelCo.Jason.ServiceContracts\ParcelCo.Json.ServiceContracts.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

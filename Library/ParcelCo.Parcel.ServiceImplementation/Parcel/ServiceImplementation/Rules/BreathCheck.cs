@@ -6,8 +6,10 @@ using ParcelCo.Parcel.Exceptions;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
+    /// <inheritdoc />
     public class BreathCheck : IBreathCheck
     {
+        /// <inheritdoc />
         public void ApplyRule(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight, IParcelResult parcelResult)
         {
             if (breath <= 0)

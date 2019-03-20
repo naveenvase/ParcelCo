@@ -7,8 +7,10 @@ using ParcelCo.Parcel.Exceptions;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
+    /// <inheritdoc />
     public class DimensionsCheck : IDimensionsCheck
     {
+        /// <inheritdoc />
         public void ApplyRule(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight, IParcelResult parcelResult)
         {
             var result = (from parcel in parcelTypes.OrderBy(x => x.MaxSize) where (length + (breath * 2) + (height * 2)) <= parcel.MaxSize && weight <= parcel.MaxWeight select parcel).FirstOrDefault() ;

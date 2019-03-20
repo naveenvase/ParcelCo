@@ -5,6 +5,10 @@
     <RootNamespace>ParcelCo</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\GitHub\ParcelCo\Library\ParcelCo.Parcel.ServiceContracts\ParcelCo.Parcel.ServiceContracts.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\ParcelCo.Parcel.ModelContracts\ParcelCo.Parcel.ModelContracts.csproj" />
   </ItemGroup>

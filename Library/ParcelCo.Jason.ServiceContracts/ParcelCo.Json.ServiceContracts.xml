@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParcelCo.Json.ServiceContracts</name>
+    </assembly>
+    <members>
+        <member name="T:ParcelCo.Json.ServiceContracts.IJsonReader">
+            <summary>Reads Json content</summary>
+        </member>
+        <member name="M:ParcelCo.Json.ServiceContracts.IJsonReader.ReadOjectFromJsonFile``1(System.String)">
+            <summary>Reads Json content from a file and puts it into a collection object</summary>
+            <typeparam name="T"></typeparam>
+            <param name="fileLocation">The file location.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
