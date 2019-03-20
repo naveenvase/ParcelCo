@@ -18,12 +18,14 @@
 
 * The Interfaces, classes are documented with xml comments.
 
-* For package types Small, Medium, Large the overall size is calculated and stored as MaxSize. The calcuation for Maxsise is as follow: 
-  * Length + (Breath multipliedby 2) + (Height multipliedby 2). This MaxSize is used to recommend a package type. For more details look into comments section for DimensionsCheck class in ParcelCo.Parcel.ServiceImplementation.Rules
+* For package types Small, Medium, Large the overall size is calculated and stored as OverallSize. The calcuation is as follow: 
+  * Length + (Breath multipliedby 2) + (Height multipliedby 2). This OverallSize is used to recommend a package type. For more details look into comments section for DimensionsCheck class in ParcelCo.Parcel.ServiceImplementation.Rules
   
 * The data for package types Small, Medium, Large is stored in a json file. The component retrieves this data and uses this data to recommend package types.
 
 * Validation/Business logic for identifying best package solution is rules-based and new rules can be added by adding new classes that apply the IRule interface, rather than modifying the class.
+
+* Solution caters for localised content i.e. user messages, user error messages. Resources file for various various languages needs to be completed.
 
 # Parse the Parcel #
 
