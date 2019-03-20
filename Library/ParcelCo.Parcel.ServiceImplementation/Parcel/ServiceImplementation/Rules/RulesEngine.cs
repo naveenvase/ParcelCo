@@ -5,6 +5,8 @@ using ParcelCo.Parcel.ServiceContracts.Rules;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
+
+    /// <seealso cref="IRulesEngine" />
     /// <inheritdoc />
     public class RulesEngine: IRulesEngine
     {
@@ -17,6 +19,7 @@ namespace ParcelCo.Parcel.ServiceImplementation.Rules
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RulesEngine"/> class.
+        /// 
         /// </summary>
         /// <remarks>The parameters are injected via DIcontainer</remarks>
         /// <param name="CollectionCheck">The collection check.</param>

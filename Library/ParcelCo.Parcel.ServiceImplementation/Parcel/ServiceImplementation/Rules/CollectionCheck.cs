@@ -7,9 +7,17 @@ using System.Linq;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
+
+    /// <seealso cref="ICollectionCheck" />
     /// <inheritdoc />
     public class CollectionCheck : ICollectionCheck
     {
+        /// <summary>
+        /// This rule ensures collection parameter has a valid collection object 
+        /// with valid records.
+        /// </summary>
+        /// <exception cref="RulesException">Thrown when collection object parameter 
+        /// is null or has no records or has invalid records</exception>
         /// <inheritdoc />
         public void ApplyRule(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight, IParcelResult parcelResult)
         {

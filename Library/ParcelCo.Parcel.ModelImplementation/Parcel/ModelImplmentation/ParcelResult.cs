@@ -5,7 +5,8 @@ using ParcelCo.Parcel.ModelContracts;
 
 namespace ParcelCo.Parcel.ModelImplmentation
 {
-    /// <inheritdoc/>
+    /// <seealso cref="IParcelResult" />
+    /// <inheritdoc />
     public class ParcelResult : IParcelResult
     {
         /// <inheritdoc/>

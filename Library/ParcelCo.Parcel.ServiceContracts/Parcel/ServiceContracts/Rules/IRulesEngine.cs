@@ -7,7 +7,8 @@ namespace ParcelCo.Parcel.ServiceContracts.Rules
 {
     /// <summary>
     /// This interfce acts as a factory. It is desgined to store a bunch of 
-    /// strategy classes that contain rules/business logic 
+    /// strategy classes that contain rules/business logic. These stragy classes
+    /// should be constructor injected.
     /// </summary>
     public interface IRulesEngine
     {

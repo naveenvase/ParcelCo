@@ -7,9 +7,24 @@ using ParcelCo.Parcel.Exceptions;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
+    /// <seealso cref="IDimensionsCheck" />
     /// <inheritdoc />
     public class DimensionsCheck : IDimensionsCheck
     {
+        /// <summary>
+        /// Applies the rule.
+        /// </summary>
+        /// <remarks>
+        /// This rule determines the overall size of the user 
+        /// entered package dimensions. Formula used for this:
+        /// length + breath * 2 + height * 2
+        /// Based on this Max size, it finds the closest record that matches this Maxsize 
+        /// from the collection of approved/recommended packages the business
+        /// deals with. Uses linq to find the best match. If none can be found then
+        /// throws an exception.
+        /// </remarks>
+        /// <exception cref="SolutionNotFoundException">Thrown when no good match
+        /// can be found </exception>
         /// <inheritdoc />
         public void ApplyRule(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight, IParcelResult parcelResult)
         {

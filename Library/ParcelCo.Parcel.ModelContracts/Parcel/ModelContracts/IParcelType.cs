@@ -13,8 +13,10 @@ namespace ParcelCo.Parcel.ModelContracts
         /// <summary>Gets or sets the package/parcel cost.</summary>
         /// <value>The cost.</value>
         decimal Cost { get; set; }
-        /// <summary>Gets or sets the package/parcel maximum size.</summary>
-        /// <value>The maximum size.</value>
+        /// <summary>Gets or sets the package/parcel overall size. 
+        /// This is calculated using the formula
+        /// Length + (Breath * 2) + (Height * 2)</summary>
+        /// <value>The overal package size.</value>
         float MaxSize { get; set; }
         /// <summary>Gets or sets the package/parcel maximum weight.</summary>
         /// <value>The maximum weight.</value>

@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ParcelCo.Parcel.Exceptions\ParcelCo.Parcel.Exceptions.csproj" />
     <ProjectReference Include="..\ParcelCo.Parcel.ModelContracts\ParcelCo.Parcel.ModelContracts.csproj" />
   </ItemGroup>
 

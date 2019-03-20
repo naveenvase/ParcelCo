@@ -5,7 +5,8 @@ using ParcelCo.Json.ServiceContracts;
 
 namespace ParcelCo.Json.ServiceImplementation
 {
-    /// <inheritdoc/>
+    /// <seealso cref="IJsonReader" />
+    /// <inheritdoc />
     public class JsonReader : IJsonReader
     {
         /// <inheritdoc/>

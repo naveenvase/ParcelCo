@@ -6,7 +6,9 @@ using ParcelCo.Parcel.Exceptions;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
-    /// <inheritDoc/>
+
+    /// <seealso cref="IWeightCheck" />
+    /// <inheritDoc />
     public class WeightCheck : IWeightCheck
     {
         /// <inheritDoc/>

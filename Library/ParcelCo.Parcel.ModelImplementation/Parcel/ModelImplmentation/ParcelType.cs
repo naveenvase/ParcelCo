@@ -1,12 +1,11 @@
 ﻿using ParcelCo.Parcel.ModelContracts;
 using ParcelCo.Json.ServiceContracts;
 using System.Collections.Generic;
-using ParcelCo.Parcel.Resources.Exceptions;
-using System.Linq;
 
 namespace ParcelCo.Parcel.ModelImplmentation
 {
-    /// <inheritdoc/>
+    /// <seealso cref="IParcelType" />
+    /// <inheritdoc />
     public class ParcelType :IParcelType
     {
         /// <inheritdoc/>
@@ -21,7 +20,8 @@ namespace ParcelCo.Parcel.ModelImplmentation
         private IJsonReader jsonReader = null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ParcelType"/> class.
+        /// Initializes a new instance of the <see cref="ParcelType"/> class. The 
+        /// parameters are injected from DI.
         /// </summary>
         /// <param name="jsonReader">The json file reader.</param>
         public ParcelType(IJsonReader jsonReader)
