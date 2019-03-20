@@ -9,8 +9,8 @@
 	* ParcelCo.Parcel.ServiceImplementation
 	* ParcelCo.Parcel.ModelContracts
 	* ParcelCo.Parcel.ModelImplementation
-	* ParcelCo.Jason.ServiceContracts - to retrieve json data from a given file
-	* ParcelCo.Jason.ServiceImplementation
+	* ParcelCo.Json.ServiceContracts - to retrieve json data from a given file
+	* ParcelCo.Json.ServiceImplementation
 	* ParcelCo.Parcel.Resources - Caters for localised content. Designed the solution but needs resource files for various languages. 
 	* ParcelCo.Parcel.Exceptions
 	* ParcelCo.Parcel.Constants

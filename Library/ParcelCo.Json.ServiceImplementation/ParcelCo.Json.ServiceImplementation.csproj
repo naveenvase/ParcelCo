@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\GitHub\ParcelCo\Library\ParcelCo.Jason.ServiceImplementation\ParcelCo.Json.ServiceImplementation.xml</DocumentationFile>
+    <DocumentationFile>D:\GitHub\ParcelCo\Library\ParcelCo.Json.ServiceImplementation\ParcelCo.Json.ServiceImplementation.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ParcelCo.Jason.ServiceContracts\ParcelCo.Json.ServiceContracts.csproj" />
+    <ProjectReference Include="..\ParcelCo.Json.ServiceContracts\ParcelCo.Json.ServiceContracts.csproj" />
   </ItemGroup>
 
 </Project>

@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ParcelCo.Jason.ServiceContracts\ParcelCo.Json.ServiceContracts.csproj" />
-    <ProjectReference Include="..\ParcelCo.Jason.ServiceImplementation\ParcelCo.Json.ServiceImplementation.csproj" />
+    <ProjectReference Include="..\ParcelCo.Json.ServiceContracts\ParcelCo.Json.ServiceContracts.csproj" />
+    <ProjectReference Include="..\ParcelCo.Json.ServiceImplementation\ParcelCo.Json.ServiceImplementation.csproj" />
     <ProjectReference Include="..\ParcelCo.Parcel.ModelContracts\ParcelCo.Parcel.ModelContracts.csproj" />
     <ProjectReference Include="..\ParcelCo.Parcel.ModelImplementation\ParcelCo.Parcel.ModelImplementation.csproj" />
     <ProjectReference Include="..\ParcelCo.Parcel.ServiceContracts\ParcelCo.Parcel.ServiceContracts.csproj" />
