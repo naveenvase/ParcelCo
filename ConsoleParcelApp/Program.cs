@@ -63,7 +63,7 @@ namespace ConsoleParcelApp
         /// <param name="AppConfigBuilder">The application configuration builder.</param>
         private static void ConfigureApp(IConfigurationBuilder AppConfigBuilder)
         {
-            var environmentName = Environment.GetEnvironmentVariable("CURRENT_ENVIRONMENT");
+            var environmentName = Environment.GetEnvironmentVariable("CURRENT_ENVIRONMENT",EnvironmentVariableTarget.Machine);
 
             AppConfigBuilder
             .SetBasePath(Directory.GetCurrentDirectory())

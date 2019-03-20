@@ -9,12 +9,12 @@ using ParcelCo.Parcel.Constants.Exceptions;
 
 namespace XUnitTest
 {
-    public class RulesEngineTests : IClassFixture<DbFixture>
+    public class RuleTests : IClassFixture<DbFixture>
     {
         private readonly ServiceProvider serviceProvider;
         private readonly ServiceProvider MockedParcelServiceProvider;
 
-        public RulesEngineTests(DbFixture fixture)
+        public RuleTests(DbFixture fixture)
         {
             serviceProvider = fixture.ServiceProvider;
             MockedParcelServiceProvider = fixture.MockedParcelServiceProvider;
