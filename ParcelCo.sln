@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelCo.Parcel.ModelContra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelCo.Parcel.ModelImplementation", "Library\ParcelCo.Parcel.ModelImplementation\ParcelCo.Parcel.ModelImplementation.csproj", "{1ED4F2ED-CF08-4CF1-8E06-548AC046731A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelCo.Json.ServiceContracts", "Library\ParcelCo.Jason.ServiceContracts\ParcelCo.Json.ServiceContracts.csproj", "{A34CA162-28D1-439A-B92C-86BF73060FB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelCo.Json.ServiceContracts", "Library\ParcelCo.Json.ServiceContracts\ParcelCo.Json.ServiceContracts.csproj", "{A34CA162-28D1-439A-B92C-86BF73060FB9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelCo.Json.ServiceImplementation", "Library\ParcelCo.Jason.ServiceImplementation\ParcelCo.Json.ServiceImplementation.csproj", "{4C576AF6-4E10-4EAD-848F-6A698E692281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelCo.Json.ServiceImplementation", "Library\ParcelCo.Json.ServiceImplementation\ParcelCo.Json.ServiceImplementation.csproj", "{4C576AF6-4E10-4EAD-848F-6A698E692281}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcelCo.Parcel.Exceptions", "Library\ParcelCo.Parcel.Exceptions\ParcelCo.Parcel.Exceptions.csproj", "{4B41A0DF-3B10-4152-B5C8-DA005ECEF28F}"
 EndProject

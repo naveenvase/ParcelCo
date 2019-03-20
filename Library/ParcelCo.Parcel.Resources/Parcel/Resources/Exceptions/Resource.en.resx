@@ -120,6 +120,9 @@
   <data name="BreathIsInvalid" xml:space="preserve">
     <value>Breath is not valid</value>
   </data>
+  <data name="CollectionInvalidRecords" xml:space="preserve">
+    <value>Collection has invalid records</value>
+  </data>
   <data name="CollectionIsEmpty" xml:space="preserve">
     <value>Parcel type collection is empty</value>
   </data>

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParcelCo.Parcel.ServiceImplementation</name>
+    </assembly>
+    <members>
+        <member name="T:ParcelCo.Parcel.ServiceImplementation.Parcel">
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.IParcel" />
+            <inheritdoc />
+        </member>
+        <member name="F:ParcelCo.Parcel.ServiceImplementation.Parcel.packageRulesEngine">
+            <summary>
+            Contains the collection of rules that need to be satisfied
+            </summary>
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Parcel.#ctor(ParcelCo.Parcel.ServiceContracts.Rules.IRulesEngine)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParcelCo.Parcel.ServiceImplementation.Parcel"/> class.
+            </summary>
+            <param name="rulesEngine">The rules engine.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Parcel.Calculate(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single)">
+            <returns>
+              <see cref="T:ParcelCo.Parcel.ModelContracts.IParcelResult"></see>;
+            </returns>
+            <inheritdoc />
+        </member>
+        <member name="T:ParcelCo.Parcel.ServiceImplementation.Rules.BreathCheck">
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IBreathCheck" />
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Rules.BreathCheck.ApplyRule(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single,ParcelCo.Parcel.ModelContracts.IParcelResult)">
+            <summary>
+            Ensures breath is valid
+            </summary>
+            <exception cref="T:ParcelCo.Parcel.Exceptions.RulesException">Thrown when rule fails</exception>
+            <inheritdoc />
+        </member>
+        <member name="T:ParcelCo.Parcel.ServiceImplementation.Rules.CollectionCheck">
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.ICollectionCheck" />
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Rules.CollectionCheck.ApplyRule(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single,ParcelCo.Parcel.ModelContracts.IParcelResult)">
+            <summary>
+            This rule ensures collection parameter has a valid collection object 
+            with valid records.
+            </summary>
+            <exception cref="T:ParcelCo.Parcel.Exceptions.RulesException">Thrown when collection object parameter 
+            is null or has no records or has invalid records</exception>
+            <inheritdoc />
+        </member>
+        <member name="T:ParcelCo.Parcel.ServiceImplementation.Rules.DimensionsCheck">
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IDimensionsCheck" />
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Rules.DimensionsCheck.ApplyRule(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single,ParcelCo.Parcel.ModelContracts.IParcelResult)">
+            <summary>
+            Applies the rule.
+            </summary>
+            <remarks>
+            This rule determines the overall size of the user 
+            entered package dimensions. Formula used for this:
+            length + breath * 2 + height * 2
+            It finds the closest record that matches this OverallSize 
+            from the collection of approved/recommended packages the business
+            deals with. Uses linq to find the best match. If none can be found then
+            throws an exception.
+            </remarks>
+            <exception cref="T:ParcelCo.Parcel.Exceptions.SolutionNotFoundException">Thrown when no good match
+            can be found </exception>
+            <inheritdoc />
+        </member>
+        <member name="T:ParcelCo.Parcel.ServiceImplementation.Rules.HeightCheck">
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IHeightCheck" />
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Rules.HeightCheck.ApplyRule(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single,ParcelCo.Parcel.ModelContracts.IParcelResult)">
+            <summary>
+            Ensures height is valid
+            </summary>
+            <exception cref="T:ParcelCo.Parcel.Exceptions.RulesException">Thrown when rule fails</exception>
+            <inheritdoc />
+        </member>
+        <member name="T:ParcelCo.Parcel.ServiceImplementation.Rules.LengthCheck">
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.ILengthCheck" />
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Rules.LengthCheck.ApplyRule(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single,ParcelCo.Parcel.ModelContracts.IParcelResult)">
+            <summary>
+            Ensures length is valid
+            </summary>
+            <exception cref="T:ParcelCo.Parcel.Exceptions.RulesException">Thrown when rule fails</exception>
+            <inheritdoc />
+        </member>
+        <member name="T:ParcelCo.Parcel.ServiceImplementation.Rules.RulesEngine">
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IRulesEngine" />
+            <inheritdoc />
+        </member>
+        <member name="F:ParcelCo.Parcel.ServiceImplementation.Rules.RulesEngine.parcelResult">
+            <summary>
+            The parcel result object contains the recommended package type
+            </summary>
+        </member>
+        <member name="P:ParcelCo.Parcel.ServiceImplementation.Rules.RulesEngine.Rules">
+            <inheritdoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Rules.RulesEngine.#ctor(ParcelCo.Parcel.ServiceContracts.Rules.ICollectionCheck,ParcelCo.Parcel.ServiceContracts.Rules.ILengthCheck,ParcelCo.Parcel.ServiceContracts.Rules.IBreathCheck,ParcelCo.Parcel.ServiceContracts.Rules.IHeightCheck,ParcelCo.Parcel.ServiceContracts.Rules.IWeightCheck,ParcelCo.Parcel.ServiceContracts.Rules.IDimensionsCheck,ParcelCo.Parcel.ModelContracts.IParcelResult)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParcelCo.Parcel.ServiceImplementation.Rules.RulesEngine"/> class.
+            
+            </summary>
+            <remarks>The parameters are injected via DIcontainer</remarks>
+            <param name="CollectionCheck">The collection check.</param>
+            <param name="lengthCheck">The length check.</param>
+            <param name="breathCheck">The breath check.</param>
+            <param name="heightCheck">The height check.</param>
+            <param name="weightCheck">The weight check.</param>
+            <param name="dimensionsCheck">The dimensions check.</param>
+            <param name="parcelResult">The parcel result.</param>
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Rules.RulesEngine.ApplyRules(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single)">
+            <inheritdoc />
+        </member>
+        <member name="T:ParcelCo.Parcel.ServiceImplementation.Rules.WeightCheck">
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IWeightCheck" />
+            <inheritDoc />
+        </member>
+        <member name="M:ParcelCo.Parcel.ServiceImplementation.Rules.WeightCheck.ApplyRule(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single,ParcelCo.Parcel.ModelContracts.IParcelResult)">
+            <inheritDoc/>
+        </member>
+    </members>
+</doc>

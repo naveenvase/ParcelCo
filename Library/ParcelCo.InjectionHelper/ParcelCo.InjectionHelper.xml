@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParcelCo.InjectionHelper</name>
+    </assembly>
+    <members>
+        <member name="T:ParcelCo.InjectionHelper.ServiceInjectionHelper">
+            <summary>
+            Helper class to set up dependency injection, via .net core built in DI.
+            </summary>
+        </member>
+        <member name="M:ParcelCo.InjectionHelper.ServiceInjectionHelper.SetServiceCollection(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>Helper methd to set up dependency injection, via .net core built in DI.</summary>
+            <param name="services">The .net core DI servicescollection</param>
+        </member>
+    </members>
+</doc>

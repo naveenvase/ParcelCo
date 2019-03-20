@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParcelCo.Parcel.Constants</name>
+    </assembly>
+    <members>
+        <member name="T:ParcelCo.Parcel.Constants.Exceptions.Constants">
+            <summary>A simple static class to store constant values (relevant to Exceptions) to be shared across the various libraries</summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.SolutionNotFound">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.LengthIsInvalid">
+            <summary>
+            TThe name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.BreathIsInvalid">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.HeightIsInvalid">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.WeightIsInvalid">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.CollectionIsEmpty">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.Type">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.FileIsEmpty">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.Exceptions.Constants.CollectionInvalidRecords">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="T:ParcelCo.Parcel.Constants.UserInput.Constants">
+            <summary>A simple static class to store constant values (relevant to user input) to be shared across the various libraries</summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.UserInput.Constants.LengthEntry">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.UserInput.Constants.BreathEntry">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.UserInput.Constants.HeightEntry">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.UserInput.Constants.WeightEntry">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+        <member name="F:ParcelCo.Parcel.Constants.UserInput.Constants.RecommendedPackage">
+            <summary>
+            The name of the variable is used to the localised text from resources project
+            </summary>
+        </member>
+    </members>
+</doc>

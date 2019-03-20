@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\GitHub\ParcelCo\Library\ParcelCo.Parcel.Constants\ParcelCo.Parcel.Constants.xml</DocumentationFile>
+    <DocumentationFile>D:\GitHub\ParcelCo\Library\ParcelCo.Json.ServiceContracts\ParcelCo.Json.ServiceContracts.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

@@ -6,8 +6,15 @@ using ParcelCo.Parcel.Exceptions;
 
 namespace ParcelCo.Parcel.ServiceImplementation.Rules
 {
+    /// <seealso cref="IHeightCheck" />
+    /// <inheritdoc />
     public class HeightCheck : IHeightCheck
     {
+        /// <summary>
+        /// Ensures height is valid
+        /// </summary>
+        /// <exception cref="RulesException">Thrown when rule fails</exception>
+        /// <inheritdoc />
         public void ApplyRule(IEnumerable<IParcelType> parcelTypes, float length, float breath, float height, float weight, IParcelResult parcelResult)
         {
             if (height <= 0)
