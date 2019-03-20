@@ -2,7 +2,7 @@
 # Not ready for review yet #
 # Parse the Parcel Developer Notes #
 
-* This exercise is based on loosely coupled components and utilises dependency injection. It relies on .net core 2.1 framework. It consists of 
+* This exercise is based on loosely coupled components.It utilises dependency injection, seperation of concerns, SOLID princples and strategy pattern. It relies on C#(7.1) and .net core 2.1 framework. It consists of 
   * console app - Only a stub to run the library services
   * Unit Tests
   * library projects
@@ -19,14 +19,14 @@
 
 * The Interfaces, classes are documented with xml comments.
 
-* For package types Small, Medium, Large the overall size is calculated and stored as OverallSize. The calcuation is as follow: 
-  * Length + (Breath multipliedby 2) + (Height multipliedby 2). This OverallSize is used to recommend a package type. For more details look into comments section for DimensionsCheck class in ParcelCo.Parcel.ServiceImplementation.Rules
+* For package types Small, Medium and Large, the overall size is calculated and stored as 'OverallSize'. The calcuation is as follow: 
+  * Length + (Breath multipliedby 2) + (Height multipliedby 2). This Overall package Size is used to recommend a package type that closely matches the user supplied package dimensions. For more details look into comments section for DimensionsCheck class in ParcelCo.Parcel.ServiceImplementation.Rules
   
-* The data for package types Small, Medium, Large is stored in a json file. The component retrieves this data and uses this data to recommend package types.
+* The data for package types Small, Medium and Large is stored in a json file. The component retrieves this data and uses this data to recommend package types.
 
-* Validation/Business logic for identifying best package solution is rules-based and new rules can be added by adding new classes that apply the IRule interface, rather than modifying the class.
+* Validation/Business logic for identifying best package solution is rules-based and new rules can be added by adding new classes that apply the IRule interface, rather than modifying the existing class.
 
-* Solution caters for localised content i.e. user messages, user error messages. Resources file for various languages needs to be completed.
+* Solution caters for localised content i.e. user messages, user error messages. The default Resources file and Resurce file for en cluture has been completed. Resource files for other culture can be added as required.
 
 # Parse the Parcel #
 
