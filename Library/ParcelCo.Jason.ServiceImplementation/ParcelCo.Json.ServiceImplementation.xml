@@ -5,7 +5,8 @@
     </assembly>
     <members>
         <member name="T:ParcelCo.Json.ServiceImplementation.JsonReader">
-            <inheritdoc/>
+            <seealso cref="T:ParcelCo.Json.ServiceContracts.IJsonReader" />
+            <inheritdoc />
         </member>
         <member name="M:ParcelCo.Json.ServiceImplementation.JsonReader.ReadOjectFromJsonFile``1(System.String)">
             <inheritdoc/>

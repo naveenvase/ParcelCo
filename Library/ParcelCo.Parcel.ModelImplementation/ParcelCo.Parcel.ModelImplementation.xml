@@ -5,7 +5,8 @@
     </assembly>
     <members>
         <member name="T:ParcelCo.Parcel.ModelImplmentation.ParcelResult">
-            <inheritdoc/>
+            <seealso cref="T:ParcelCo.Parcel.ModelContracts.IParcelResult" />
+            <inheritdoc />
         </member>
         <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelResult.Cost">
             <inheritdoc/>
@@ -17,7 +18,8 @@
             <inheritdoc/>
         </member>
         <member name="T:ParcelCo.Parcel.ModelImplmentation.ParcelType">
-            <inheritdoc/>
+            <seealso cref="T:ParcelCo.Parcel.ModelContracts.IParcelType" />
+            <inheritdoc />
         </member>
         <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.Type">
             <inheritdoc/>
@@ -36,7 +38,8 @@
         </member>
         <member name="M:ParcelCo.Parcel.ModelImplmentation.ParcelType.#ctor(ParcelCo.Json.ServiceContracts.IJsonReader)">
             <summary>
-            Initializes a new instance of the <see cref="T:ParcelCo.Parcel.ModelImplmentation.ParcelType"/> class.
+            Initializes a new instance of the <see cref="T:ParcelCo.Parcel.ModelImplmentation.ParcelType"/> class. The 
+            parameters are injected from DI.
             </summary>
             <param name="jsonReader">The json file reader.</param>
         </member>

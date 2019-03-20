@@ -6,14 +6,16 @@
     <members>
         <member name="T:ParcelCo.Parcel.ServiceContracts.IParcel">
             <summary>
-            Parcel service. Contains methods to identify the best package size/type based on
-            pacakge dimensions.
+            Parcel service. Contains method to identify the best package size/type 
+            for the supplied pacakge dimensions.
             </summary>
         </member>
         <member name="M:ParcelCo.Parcel.ServiceContracts.IParcel.Calculate(System.Collections.Generic.IEnumerable{ParcelCo.Parcel.ModelContracts.IParcelType},System.Single,System.Single,System.Single,System.Single)">
             <summary>
-            Identifies the best package size/type based on
-            default package types/sizes that can be accommdiated
+            Runs a bunch of rules.
+            Once all the rules are run the method ends up
+            recommending the best package size/type for the supplied
+            package dimensions.
             </summary>
             <param name="parcelTypes">Collection of parcel types/sizes that can be
             accoommodated.</param>
@@ -21,25 +23,42 @@
             <param name="breath">The breath.</param>
             <param name="height">The height.</param>
             <param name="weight">The weight.</param>
-            <returns></returns>
-            <remarks>
-            Uses linq to match the package dimensions provided with
-            the default package types/sizes that can be accommodated
-            </remarks>
+            <returns><see cref="T:ParcelCo.Parcel.ModelContracts.IParcelResult"></see>/></returns>
         </member>
         <member name="T:ParcelCo.Parcel.ServiceContracts.Rules.IBreathCheck">
+            <summary>
+            Validates the breath package dimension parameter
+            </summary>
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IRule" />
             <inheritdoc />
         </member>
         <member name="T:ParcelCo.Parcel.ServiceContracts.Rules.ICollectionCheck">
+            <summary>
+            This rule ensures collection parameter has a valid collection object 
+            with valid records.
+            </summary>
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IRule" />
             <inheritdoc />
         </member>
         <member name="T:ParcelCo.Parcel.ServiceContracts.Rules.IDimensionsCheck">
+            <summary>
+            This rule identifies the best package type solution.
+            </summary>
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IRule" />
             <inheritdoc />
         </member>
         <member name="T:ParcelCo.Parcel.ServiceContracts.Rules.IHeightCheck">
+            <summary>
+            Validates the height package dimension parameter
+            </summary>
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IRule" />
             <inheritdoc />
         </member>
         <member name="T:ParcelCo.Parcel.ServiceContracts.Rules.ILengthCheck">
+            <summary>
+            Validates the length package dimension parameter
+            </summary>
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IRule" />
             <inheritdoc />
         </member>
         <member name="T:ParcelCo.Parcel.ServiceContracts.Rules.IRule">
@@ -70,7 +89,8 @@
         <member name="T:ParcelCo.Parcel.ServiceContracts.Rules.IRulesEngine">
             <summary>
             This interfce acts as a factory. It is desgined to store a bunch of 
-            strategy classes that contain rules/business logic 
+            strategy classes that contain rules/business logic. These stragy classes
+            should be constructor injected.
             </summary>
         </member>
         <member name="P:ParcelCo.Parcel.ServiceContracts.Rules.IRulesEngine.Rules">
@@ -90,6 +110,10 @@
             <returns>Return <see cref="T:ParcelCo.Parcel.ModelContracts.IParcelResult"/> object</returns>
         </member>
         <member name="T:ParcelCo.Parcel.ServiceContracts.Rules.IWeightCheck">
+            <summary>
+            Validates the weight package dimension parameter
+            </summary>
+            <seealso cref="T:ParcelCo.Parcel.ServiceContracts.Rules.IRule" />
             <inheritdoc />
         </member>
     </members>

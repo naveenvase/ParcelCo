@@ -33,8 +33,10 @@
             <value>The cost.</value>
         </member>
         <member name="P:ParcelCo.Parcel.ModelContracts.IParcelType.MaxSize">
-            <summary>Gets or sets the package/parcel maximum size.</summary>
-            <value>The maximum size.</value>
+            <summary>Gets or sets the package/parcel overall size. 
+            This is calculated using the formula
+            Length + (Breath * 2) + (Height * 2)</summary>
+            <value>The overal package size.</value>
         </member>
         <member name="P:ParcelCo.Parcel.ModelContracts.IParcelType.MaxWeight">
             <summary>Gets or sets the package/parcel maximum weight.</summary>
