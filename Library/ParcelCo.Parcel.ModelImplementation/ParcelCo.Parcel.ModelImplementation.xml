@@ -27,7 +27,7 @@
         <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.Cost">
             <inheritdoc/>
         </member>
-        <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.MaxSize">
+        <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.OverallSize">
             <inheritdoc/>
         </member>
         <member name="P:ParcelCo.Parcel.ModelImplmentation.ParcelType.MaxWeight">

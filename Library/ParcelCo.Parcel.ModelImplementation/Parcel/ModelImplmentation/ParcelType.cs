@@ -13,7 +13,7 @@ namespace ParcelCo.Parcel.ModelImplmentation
         /// <inheritdoc/>
         public decimal Cost { get; set; }
         /// <inheritdoc/>
-        public float MaxSize { get; set; }
+        public float OverallSize { get; set; }
         /// <inheritdoc />
         public float MaxWeight { get; set; }
         /// <inheritdoc />
@@ -36,13 +36,13 @@ namespace ParcelCo.Parcel.ModelImplmentation
         }
 
         /// <inheritdoc />
-        public IParcelType CreateTransientInstance(string type = null, decimal cost = 0, float maxSize = 0, float maxWeight = 0)
+        public IParcelType CreateTransientInstance(string type = null, decimal cost = 0, float overallSize = 0, float maxWeight = 0)
         {
             IParcelType instance = (IParcelType)MemberwiseClone();
 
             instance.Type = type;
             instance.Cost = cost;
-            instance.MaxSize = maxSize;
+            instance.OverallSize = overallSize;
             instance.MaxWeight = maxWeight;
 
             return instance;

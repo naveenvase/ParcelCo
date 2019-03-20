@@ -62,7 +62,7 @@
             This rule determines the overall size of the user 
             entered package dimensions. Formula used for this:
             length + breath * 2 + height * 2
-            Based on this Max size, it finds the closest record that matches this Maxsize 
+            It finds the closest record that matches this OverallSize 
             from the collection of approved/recommended packages the business
             deals with. Uses linq to find the best match. If none can be found then
             throws an exception.

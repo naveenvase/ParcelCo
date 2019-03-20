@@ -17,7 +17,7 @@ namespace ParcelCo.Parcel.ModelContracts
         /// This is calculated using the formula
         /// Length + (Breath * 2) + (Height * 2)</summary>
         /// <value>The overal package size.</value>
-        float MaxSize { get; set; }
+        float OverallSize { get; set; }
         /// <summary>Gets or sets the package/parcel maximum weight.</summary>
         /// <value>The maximum weight.</value>
         float MaxWeight { get; set; }
@@ -35,9 +35,9 @@ namespace ParcelCo.Parcel.ModelContracts
         /// </summary>
         /// <param name="type">The type.</param>
         /// <param name="cost">The cost.</param>
-        /// <param name="maxSize">The maximum size.</param>
+        /// <param name="overallSize">The overall size.</param>
         /// <param name="maxWeight">The maximum weight.</param>
         /// <returns></returns>
-        IParcelType CreateTransientInstance(string type = null, decimal cost = 0, float maxSize = 0, float maxWeight = 0);
+        IParcelType CreateTransientInstance(string type = null, decimal cost = 0, float overallSize = 0, float maxWeight = 0);
     }
 }
