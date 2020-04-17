@@ -1,6 +1,16 @@
 
-# Parse the Parcel Developer Notes #
+# Parse the Parcel #
+we're looking to make selling items even easier and so we've decided to build our very own package shipping network. We've dug a tunnel between the North and South Islands that enables us to offer the same rates for parcels sent anywhere in the country, and we've just finished fueling up our fleet of courier vans; all that remains to be done is to update the website so that users can be advised how much their items will cost to send.
 
+Our new service shipping costs are based on size and we offer different prices for small, medium, and large boxes. Unfortunately we're currently unable to move heavy packages so we've placed an upper limit of 25kg per package.
+
+| Package Type | Length | Breadth | Height | Cost |
+| ------------ | ------ | ------- | ------ | ---- |
+| Small | 200mm | 300mm | 150mm | $5.00 |
+| Medium | 300mm | 400mm | 200mm| $7.50 |
+| Large | 400mm | 600mm | 250mm | $8.50 |
+
+# Parse the Parcel Developer Notes #
 * This exercise is based on loosely coupled components. It utilises dependency injection, seperation of concerns, SOLID princples and strategy pattern. It relies on C#(7.1) and .net core 2.1 framework. It consists of 
   * console app - Only a stub to run the library services
   * Unit Tests - 65 test cases
@@ -28,10 +38,7 @@
 * Solution caters for localised content i.e. user messages, user error messages. The default resource file and resurce file for 'en' clutures has been completed. Resource files for other culture can be added as required in ParcelCo.Parcel.Resources
 
 # Parse the Parcel #
-
-
 we're looking to make selling items even easier and so we've decided to build our very own package shipping network. We've dug a tunnel between the North and South Islands that enables us to offer the same rates for parcels sent anywhere in the country, and we've just finished fueling up our fleet of courier vans; all that remains to be done is to update the website so that users can be advised how much their items will cost to send.
-
 Our new service shipping costs are based on size and we offer different prices for small, medium, and large boxes. Unfortunately we're currently unable to move heavy packages so we've placed an upper limit of 25kg per package.
 
 | Package Type | Length | Breadth | Height | Cost |
@@ -39,4 +46,3 @@ Our new service shipping costs are based on size and we offer different prices f
 | Small | 200mm | 300mm | 150mm | $5.00 |
 | Medium | 300mm | 400mm | 200mm| $7.50 |
 | Large | 400mm | 600mm | 250mm | $8.50 |
-
